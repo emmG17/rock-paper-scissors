@@ -4,33 +4,41 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
         <script src="./rps.js" defer></script>
         <title>Rock, paper, scissors!</title>
     </head>
     <body>
-        <h1>Select one to play</h1>
-        <div class="options">
-            <div id="rock">
-                <img src="./images/002-rock.png" alt="rock" />
-                <h2>rock</h2>
+        <header>
+            <h1>Rock, paper, scissors!</h1>
+            <p>select one to play</p>
+        </header>
+        <main>
+            <div class="game">
+                <div class="options">
+                    <div id="rock">
+                        <img src="./images/002-rock.png" alt="rock" />
+                        <h2>rock</h2>
+                    </div>
+                    <div id="paper">
+                        <img src="./images/001-tissue-paper.png" alt="paper" />
+                        <h2>paper</h2>
+                    </div>
+                    <div id="scissors">
+                        <img src="images/003-scissor-tool.png" alt="scissors" />
+                        <h2>scissors</h2>
+                    </div>
+                </div>
+                <h3>vs</h3>
+                <div id="computerSelection">
+                    <img src="" alt="scissors" />
+                    <h2></h2>
+                </div>
             </div>
-            <div id="paper">
-                <img src="./images/001-tissue-paper.png" alt="paper" />
-                <h2>paper</h2>
+            <div id="result">
+                <p></p>
             </div>
-            <div id="scissors">
-                <img src="images/003-scissor-tool.png" alt="scissors" />
-                <h2>scissors</h2>
-            </div>
-        </div>
-        <h3>vs</h3>
-        <div id="computerSelection">
-            <img src="" alt="scissors"/>
-            <h2></h2>
-        </div>
-        <div id="Result">
-            <p></p>
-        </div>
+        </main>
         <footer>
             <div>
                 Icons made by
