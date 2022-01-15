@@ -102,3 +102,23 @@ footer {
     width: 20%;
     filter: invert(100%);
 }
+
+#computer-selection .weapon {    
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+     }
+}
