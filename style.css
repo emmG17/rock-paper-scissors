@@ -26,6 +26,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 3px solid black;
 }
 
 header h1 {
@@ -39,8 +40,10 @@ main {
 }
 
 footer {
-    text-align: center;
+    text-align:end;
+    padding-right: 100px;
     margin: 2rem 0;
+    font-size: .8rem;
 }
 
 .game {
@@ -79,8 +82,15 @@ footer {
 }
 
 #result {
-    width: 30%;
+    width: 40%;
     flex: 0, 0, auto;
+    margin-left: 20px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-family: 'Major Mono Display', Courier, monospace;
+    font-size: 3rem;
 }
 
 .versus {
@@ -88,10 +98,12 @@ footer {
     text-align: center;
     font-size: 2rem;
     margin: 1rem 0;
+
 }
 
 #computer-selection {
     display: flex;
+    flex-direction: column;
     color: white;
     flex: 1;
     width: 100%;
@@ -104,7 +116,7 @@ footer {
 }
 
 #computer-selection .weapon {    
-    animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 1.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
