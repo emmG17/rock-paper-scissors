@@ -28,3 +28,19 @@ header h1 {
     margin-bottom: 0;
     font-family: 'Major Mono Display', Courier, monospace;
 }
+
+.options {
+    display: flex;
+}
+
+.weapon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.weapon img {
+    width: 50%;
+}
