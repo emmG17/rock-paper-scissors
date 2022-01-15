@@ -35,6 +35,7 @@ function playRound(playerSelection, computerSelection) {
 
 function createComputerImg(computerMove){
     let computerImg = document.createElement("img");
+
     if (computerMove === "rock") {
         computerImg.setAttribute("src", "./images/002-rock.png")
     } else if (computerMove === "paper") {
@@ -48,8 +49,10 @@ function createComputerImg(computerMove){
 function createComputerWeapon (computerMove) {
     let computerImg = createComputerImg(computerMove);
     let computerMoveName = document.createElement("h2");
-    computerMoveName.textContent = computerMove;;
     let computerWeapon = document.createElement("div");
+    
+    computerMoveName.textContent = computerMove;;
+    
     computerWeapon.classList.add('weapon');
     computerWeapon.appendChild(computerImg);
     computerWeapon.appendChild(computerMoveName);
@@ -58,19 +61,26 @@ function createComputerWeapon (computerMove) {
 
 }
 
+let computerMove;
+let playerMove;
 
+
+const computerDiv = document.getElementById("computer-selection");
 const playerOptions = document.querySelectorAll(".options .weapon");
+const gameResult = document.getElementById("result")
+
 playerOptions.forEach((option) => {
     option.addEventListener("click", () => {
         let computerWeapon = document.querySelector("#computer-selection .weapon");
-        let computerDiv = document.getElementById("computer-selection");
         if (computerWeapon) computerDiv.removeChild(computerWeapon);
-        let playerMove = option.id;
-        let computerMove = computerPlay();
-        
-        computerDiv.appendChild(createComputerWeapon(computerMove));
-        
+
+        computerMove = computerPlay();
+        playerMove = option.id;
+        computerWeapon = createComputerWeapon(computerMove);
+        computerDiv.appendChild(computerWeapon);
+
+        computerWeapon.addEventListener('animationend', () => {
+            gameResult.textContent = playRound(computerMove, playerMove);
+        })
     });
 });
-// let computerContainer = document.getElementById("computer-selection");
-// computerContainer.appendChild(createComputerWeapon(computerMove));
