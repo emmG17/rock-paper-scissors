@@ -74,7 +74,7 @@ playerOptions.forEach((option) => {
         computerDiv.appendChild(computerWeapon);
 
         computerWeapon.addEventListener("animationend", () => {
-            gameResult.textContent = playRound(computerMove, playerMove);
+            gameResult.textContent = playRound(playerMove, computerMove);
         });
     });
 });
