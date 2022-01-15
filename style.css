@@ -12,9 +12,13 @@ html {
 }
 
 body {
+    height: 100vh;
     padding: 0;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header {
@@ -27,6 +31,11 @@ header {
 header h1 {
     margin-bottom: 0;
     font-family: 'Major Mono Display', Courier, monospace;
+}
+
+main {
+    display: flex;
+    height: 80%;
 }
 
 .options {
@@ -43,4 +52,22 @@ header h1 {
 
 .weapon img {
     width: 50%;
+}
+
+
+.versus {
+    font-family: 'Major Mono Display', Courier, monospace;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#result {
+    width: 30%;
+    flex: 0, 0, auto;
+}
+
+#computer-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
