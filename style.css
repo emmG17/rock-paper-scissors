@@ -108,7 +108,7 @@ footer {
 
 #result {
     width: 40%;
-    flex: 0, 0, auto;
+    flex: 0 0 auto;
     margin-left: 20px;
     padding: 1.5rem;
     display: flex;
