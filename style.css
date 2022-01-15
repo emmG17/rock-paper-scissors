@@ -38,8 +38,22 @@ main {
     height: 80%;
 }
 
+footer {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.game {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    gap: 5vh;
+}
+
 .options {
     display: flex;
+    flex: 1;
 }
 
 .weapon {
@@ -48,17 +62,20 @@ main {
     align-items: center;
     justify-content: center;
     flex: 1;
+    transition: transform .4s;
+    border-radius: 3px;
 }
+
 
 .weapon img {
     width: 50%;
+    width: 60%;
 }
 
-
-.versus {
-    font-family: 'Major Mono Display', Courier, monospace;
-    text-align: center;
-    font-size: 3rem;
+.options .weapon:hover {
+    width: 50%;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 10px rgba(167, 167, 167, 0.5);
 }
 
 #result {
@@ -66,8 +83,22 @@ main {
     flex: 0, 0, auto;
 }
 
+.versus {
+    font-family: 'Major Mono Display', Courier, monospace;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
 #computer-selection {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    flex: 1;
+    width: 100%;
+    background-color: black;
+}
+
+#computer-selection img {
+    width: 20%;
+    filter: invert(100%);
 }
