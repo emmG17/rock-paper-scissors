@@ -11,8 +11,8 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    const playerMove = playerSelection.toLowerCase();
-    const computerMove = computerSelection.toLowerCase();
+    const playerMove = playerSelection;
+    const computerMove = computerSelection;
 
     if (playerMove === computerMove) {
         return "It's a tie";
